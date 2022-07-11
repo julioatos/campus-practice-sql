@@ -18,7 +18,7 @@ create table Projects
 (
 	Id int,
 	Name varchar(150),
-	StartDate Datetime,
+	StartDate Date,
 	Deadline Date,
 	FinishedOn Date,
 	StatusId int,
