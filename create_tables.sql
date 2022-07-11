@@ -12,7 +12,7 @@ create table Status
 	Name varchar(50),
 	constraint PK_Status primary key (Id),
 	constraint UQ_Status_Name unique(Name) 
-)
+);
 
 create table Projects
 (
@@ -26,7 +26,7 @@ create table Projects
 	constraint PK_Projects primary key(Id),
 	constraint UQ_Projects_Name unique(Name),
 	constraint FK_Status_Projects foreign key(StatusId) references Status(Id)
-)
+);
 
 create table Employees
 (
@@ -39,10 +39,4 @@ create table Employees
 	constraint PK_Employees primary key(Id),
 	constraint UQ_Employees_Email unique(Email),
 	constraint UQ_Employees_Phone unique(Phone)
-)
-
-
-drop table Company;
-drop table Employees;
-drop table Status;
-drop table Projects;
+);
